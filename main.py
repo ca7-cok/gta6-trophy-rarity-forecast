@@ -37,14 +37,13 @@ the history itself shows the refresh rhythm.
 import json
 import math
 import os
-import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 INPUT_DIR = Path(os.environ.get("MAKEFUN_INPUT_DIR", "/input"))
 OUTPUT_DIR = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
 
-LEVELS = [0.05, 0.25, 0.5, 0.75, 0.95]
+# The quantile levels the contest scores, in the order each row lists them.
 Z = [-1.645, -0.674, 0.0, 0.674, 1.645]
 
 # --- model constants (priors; see module docstring) ---
